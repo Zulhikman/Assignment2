@@ -1,3 +1,16 @@
-p{
-  color: blue;
+#navigation {
+  background-color: ;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  background: black;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+#navigation a{
+  text-decoration: none;
+  display: block;
+  color: gold;
+  padding: 1em;
 }
