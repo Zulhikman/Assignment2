@@ -1,9 +1,22 @@
+#Logo{
+  background: #CEE9F1;
+  padding: 1.4em;
+}
+
+#Logo a{
+  text-decoration: none;
+  display: block;
+  color: #1C3B64;
+  font-family: monospace;
+
+}
+
 #navigation {
   background-color: ;
   /* display: flex; */
   display: inline-block;
   list-style: none;
-  margin-top: 11em;
+  margin-top: 3em;
   padding-right: 1em;
   background: #CEE9F1;
   /* flex-flow: row wrap;
@@ -15,6 +28,7 @@
   display: block;
   color: #39464A;
   padding: 2em;
+  font-weight: bold;
 }
 
 #navigation a:hover{
