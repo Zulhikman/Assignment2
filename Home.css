@@ -1,16 +1,22 @@
 #navigation {
   background-color: ;
-  display: flex;
+  /* display: flex; */
+  display: inline-block;
   list-style: none;
-  margin: 0;
-  background: black;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  margin-top: 11em;
+  padding-right: 1em;
+  background: #CEE9F1;
+  /* flex-flow: row wrap;
+  justify-content: flex-end; */
 }
 
 #navigation a{
   text-decoration: none;
   display: block;
-  color: gold;
-  padding: 1em;
+  color: #39464A;
+  padding: 2em;
+}
+
+#navigation a:hover{
+  color:#0A6F74 ;
 }
