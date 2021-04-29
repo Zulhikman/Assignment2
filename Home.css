@@ -3,8 +3,11 @@
   margin: 0;
 }
 
+body{
+  background: #FFFCF8;
+}
 #Logo{
-  background: #F7FEDA;
+  background: #F8FFEF;
   padding: 1.4em;
   margin: 0;
 }
@@ -49,7 +52,7 @@
   list-style: none;
   margin-top: 0;
   padding-right: 1em;
-  background: #F5FFC8;
+  background: #FBFFF6;
   flex-flow: row wrap;
   justify-content: center;
 
@@ -88,6 +91,5 @@
 }
 
 html{
-  
   scroll-behavior: smooth;
 }
