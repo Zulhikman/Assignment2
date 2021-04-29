@@ -61,7 +61,7 @@ body{
 #navigation a {
   list-style: none;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   color: #39464A;
   padding: 2em;
   font-weight: bold;
@@ -92,4 +92,14 @@ body{
 
 html{
   scroll-behavior: smooth;
+}
+
+.center{
+  display: inline-block;
+  margin: 0 auto;
+  width: 20em;
+}
+
+header{
+  font-weight: bold;
 }
