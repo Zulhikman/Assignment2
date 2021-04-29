@@ -10,27 +10,47 @@
     <div class="Birthday">
       <img src="gam/birth2.jpg" alt="">
       <h1>Happy Birthday Celebration Of.</h1>
-      <form class="BirthName" action="index.html" method="post">
-  <input type="text" placeholder="Enter Name!"/> <br>
+      <p id="demo"></p>
+
 
   <h2>You are invited to the party.</h2>
-  <textarea class="BirthLoca" placeholder="Enter Coordinates" rows="4" cols="50"
-    maxlength="200"></textarea>
+     <p id="demo2"></p>
 
 
 
-      <h2>From</h2>
-      <input type="text" placeholder="Enter Name!"/> <br>
+      <h2>To</h2>
+      <p id="demo3"></p>
+
+
 
     </div>
+    <form  action="index.html" method="post">
+      <input  id="name" type="text" placeholder="Enter Name!"/> <br>
+
+      <textarea id="place" placeholder="Enter Coordinates" rows="4" cols="50"></textarea><br>
+
+      <input id="name2"type="text" placeholder="Enter Name!"/> <br>
+
+
+
+        <button type="button" name="button" onclick="change_text()">Submit</button>
+
+
 
    <h6 class="source-link"><a href="https://www.freepik.com/free-photos-vectors/background"</a>Background vector created by Freepik</h6>
 
      <script type="text/javascript">
-     function changeMe(){
-       var BirthName =document.getElementById("BirthName").value;
-       var BirthLoca =document.getElementById("BirthLoca").value;
-     }
+     function change_text(){
+    var name = document.getElementById("name").value;
+    document.getElementById("demo").innerHTML = "Hello " + name;
+
+    var place = document.getElementById("place").value;
+    document.getElementById("demo2").innerHTML = "The place is at " + place;
+
+    var name2 = document.getElementById("name2").value;
+    document.getElementById("demo3").innerHTML =  name2;
+}
+
 
      </script>
 
