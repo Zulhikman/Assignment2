@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Formal Template </title>
+  </head>
+
+  <style>
+  .container {
+    float:left;
+    border: 1px solid black;
+    width: 450px;
+    height: 650px;
+  }
+
+  .container2 {
+    float:right;
+    border: 1px solid black;
+    width: 450px;
+    height: auto;
+  }
+
+  .heading {
+    position: absolute;
+    top: 170px;
+    bottom: 30px;
+    left: 145px;
+    width: 180px;
+  }
+
+  .name {
+    position: absolute;
+    top: 230px;
+  }
+
+  .and {
+    position: absolute;
+    top: 287px;
+    bottom: 30px;
+    left: 220px;
+    font-family: cursive;
+  }
+
+  .name2 {
+    position: absolute;
+    top: 316px;
+
+  }
+
+  .location {
+    position: absolute;
+    top: 385px;
+    left: 135px;
+    width: 200px;
+  }
+
+  .heading , .location {
+    text-align: center;
+    font-family: cursive;
+    height: 100px;
+  }
+  .name , .name2 {
+    left: 165px;
+    font-family:serif;
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  #text
+  {border:none;resize:none;font-family:Arial;width:400px;height:200px}
+
+  </style>
+
+
+  <body>
+  <div class="container">
+  <img src = "WeddingTemp.jpg" width = "450px" height = "650px">
+  <div class="heading"> <h4> You are cordially invited to the wedding of </h4></div>
+  <div class="name"> <h2 readonly> ROTIMAS </h2></div>
+  <div class="and"> <h4> and </h4></div>
+  <div class="name2"> <h2 readonly> MASROTI </h2></div>
+  <div id = "text"> <h4 readonly> Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club </h4></div>
+  </div>
+
+  <div class="container2">
+  <ul style="list-style-type:none">
+    <li><label for="fname">Name 1</label></li>
+    <input type="text" id="fname" name="firstname" placeholder="Enter first name">
+    <li></li>
+
+    <li> <label for="lname">Name 2</label></li>
+    <input type="text" id="lname" name="lastname" placeholder="Enter second name">
+    <li></li>
+
+    <li> <label for="subject"> Details </label></li>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <li></li>
+
+    <!-- update button once takan kira berubah lah-->
+
+    <button id = "update" onclick = "update()" type="submit"> Update </button>
+
+    <script>
+
+    </script>
+  </div>
+
+
+    </form>
+
+  </body>
+</html>
