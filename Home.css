@@ -7,7 +7,7 @@ body{
   background: #FFFCF8;
 }
 #Logo{
-  background: #EBFCD4;
+  background: #A77A69;
   padding: 1.4em;
   margin: 0;
 }
@@ -40,7 +40,7 @@ body{
 #Logo a{
   text-decoration: none;
   display: block;
-  color: #90A477;
+  color: white;
   font-family: monospace;
   font-style: italic;
   font-size: 1.5em;
@@ -52,20 +52,20 @@ body{
   list-style: none;
   margin-top: 0;
   padding-right: 1em;
-  background: #FBFFF6;
+  background: #C5AAA0;
   flex-flow: row wrap;
   justify-content: center;
 
 }
 
-#navigation a, p {
+#navigation a, p{
   list-style: none;
   text-decoration: none;
   display: inline-block;
-  color: #39464A;
+  color: white;
   padding: 2em;
   font-weight: bold;
-
+  font-family: sans-serif;
 }
 
 #navigation a:hover{
@@ -79,10 +79,11 @@ body{
 }
 
 #about {
-  background: #DDEC91;
+  background: #B39489;
   padding: 1em;
   padding-bottom: 1em;
   font-family: sans-serif;
+  color: white;
 }
 
 #contact {
