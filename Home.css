@@ -58,13 +58,14 @@ body{
 
 }
 
-#navigation a {
+#navigation a, p {
   list-style: none;
   text-decoration: none;
   display: inline-block;
   color: #39464A;
   padding: 2em;
   font-weight: bold;
+
 }
 
 #navigation a:hover{
