@@ -51,7 +51,10 @@
     position: absolute;
     top: 385px;
     left: 135px;
-    width: 200px;
+    width:200px;
+    font-family:Arial;
+    border:none;
+    resize:none;
   }
 
   .heading , .location {
@@ -64,22 +67,24 @@
     font-family:serif;
     font-size: 20px;
     font-style: italic;
+    text-align: center;
   }
 
-  #text
-  {border:none;resize:none;font-family:Arial;width:400px;height:200px}
+
+
 
   </style>
 
+    <!-- template + wordings -->
 
   <body>
   <div class="container">
   <img src = "WeddingTemp.jpg" width = "450px" height = "650px">
   <div class="heading"> <h4> You are cordially invited to the wedding of </h4></div>
-  <div class="name"> <h2 readonly> ROTIMAS </h2></div>
+  <div class="name"> <h2 id = "demo"> ROTIMAS </h2></div>
   <div class="and"> <h4> and </h4></div>
-  <div class="name2"> <h2 readonly> MASROTI </h2></div>
-  <div id = "text"> <h4 readonly> Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club </h4></div>
+  <div class="name2"> <h2 id = "demo2"> MASROTI </h2></div>
+  <div class="location"> <h4 id = "demo3"></h4></div>
   </div>
 
   <div class="container2">
@@ -92,18 +97,30 @@
     <input type="text" id="lname" name="lastname" placeholder="Enter second name">
     <li></li>
 
-    <li> <label for="subject"> Details </label></li>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <li> <label for="details"> Details </label></li>
+    <textarea id="details" name="subject" placeholder="e.g Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club" style="height:200px"></textarea>
     <li></li>
+  </ul>
 
     <!-- update button once takan kira berubah lah-->
 
     <button id = "update" onclick = "update()" type="submit"> Update </button>
+    </div>
 
     <script>
 
+function update(){
+   var name = document.getElementById("fname").value;
+   document.getElementById("demo").innerHTML = name;
+
+   var name2 = document.getElementById("lname").value;
+   document.getElementById("demo2").innerHTML = name2;
+
+   var details = document.getElementById("details").value;
+   document.getElementById("demo3").innerHTML =  details;
+}
+
     </script>
-  </div>
 
 
     </form>

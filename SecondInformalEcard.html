@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="Ecard2.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="Raya">
+      <img src="gam/raya.jpg" alt="">
+      <h1>Selamat Hari Raya Aidifitri.</h1>
+      <h1>Maaf Zahir dan Batin</h1>
+
+  <h2>Dijemput datang ke rumah dengan mesra.</h2>
+  <p id="demo"></p>
+  <br>
+
+
+      <h2>Dari</h2>
+      <p id="demo2"></p>
+
+
+
+    </div>
+
+    <form class="" action="index.html" method="post">
+      <input id="place" type="text" name="" value="">
+
+      <input id="name" type="text" placeholder="Enter Name!"/> <br>
+
+      <button onclick="change_text()">Submit</button>
+
+    </form>
+
+   <h6 class="source-link"><a href="https://www.freepik.com/free-photos-vectors/background"</a>Background vector created by Freepik</h6>
+     <script type="text/javascript">
+
+     function change_text(){
+    var place = document.getElementById("place").value;
+    document.getElementById("demo").innerHTML = place;
+
+    var name = document.getElementById("name").value;
+    document.getElementById("demo2").innerHTML = name;
+  }
+
+     </script>
+
+  </body>
+</html>
