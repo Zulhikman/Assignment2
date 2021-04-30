@@ -7,7 +7,7 @@ body{
   background: #FFFCF8;
 }
 #Logo{
-  background: #F8FFEF;
+  background: #EBFCD4;
   padding: 1.4em;
   margin: 0;
 }
@@ -40,7 +40,7 @@ body{
 #Logo a{
   text-decoration: none;
   display: block;
-  color: #87B362;
+  color: #90A477;
   font-family: monospace;
   font-style: italic;
   font-size: 1.5em;
@@ -80,8 +80,8 @@ body{
 
 #about {
   background: #DDEC91;
-  padding: 2em;
-  padding-bottom: 3em;
+  padding: 1em;
+  padding-bottom: 1em;
 }
 
 #contact {
@@ -89,6 +89,10 @@ body{
   color: white;
   padding: 2em;
   padding-bottom: 2em;
+}
+
+#contact p {
+  color: white;
 }
 
 html{
@@ -103,4 +107,21 @@ html{
 
 header{
   font-weight: bold;
+}
+
+table{
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 1em;
+  border-width: medium;
+  background: #FFE9CF;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin: 0 auto;
 }
