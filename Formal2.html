@@ -2,62 +2,79 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Formal Template </title>
   </head>
 
   <style>
 
+  body {
+    background: #FFFCF8;
+  }
+
+  .big-container {
+    display: grid;
+    grid-gap: 200px;
+    margin-top: 200px;
+    margin-left: 70px;
+    grid-template-areas:
+    "cont-1 cont-2";
+  }
+
   .container {
-    float:left;
+    /* float:left; */
     border: 1px solid black;
     width: 450px;
     height: 650px;
+    margin-left: 300px;
   }
 
   .container2 {
-    float:right;
+    /* float:right; */
     border: 1px solid black;
-    width: 450px;
-    height: auto;
+    width: 340px;
+    height: 470px;
+    margin-right: 180px;
+    margin-top: 97px;
   }
 
   .heading {
     position: absolute;
-    top: 170px;
+    top: 350px;
     bottom: 30px;
-    left: 145px;
+    left: 518px;
     width: 180px;
   }
 
   .name {
     position: absolute;
-    top: 230px;
+    top: 428px;
+    left: 500px;
   }
 
   .and {
     position: absolute;
-    top: 290px;
+    top: 473px;
     bottom: 30px;
-    left: 220px;
+    left: 596px;
     font-family: cursive;
   }
 
   .name2 {
     position: absolute;
-    top: 320px;
-
+    top: 500px;
+    left: 500px;
   }
 
   .location {
     position: absolute;
-    top: 385px;
-    left: 135px;
+    top: 560px;
+    left: 519px;
     width:185px;
     height: auto;
     font-family:Arial;
     border:none;
     resize:none;
-
   }
 
   .heading , .location {
@@ -65,7 +82,6 @@
     font-family: cursive;
   }
   .name , .name2 {
-    left: 120px;
     font-family:serif;
     font-size: 20px;
     font-style: italic;
@@ -74,15 +90,263 @@
     height: auto;
   }
 
-h2 , h4 {
+  #fname, #lname, #details{
+    width: 200px;
+    height: 36px;
+  }
+
+  #update{
+    margin: 41px;
+    margin-top: 7px;
+  }
+
+  h2 , h4 {
   color: #F8C471;
+    }
+
+    nav {
+  	position: fixed;
+  	z-index: 10;
+  	left: 0;
+  	right: 0;
+  	top: 0;
+  	font-family: sans-serif;
+  	padding: 0 3em;
+  	height: 100px;
+  	background-color: #A77A69;
+  }
+
+    nav .logo {
+  	float: left;
+  	width: 40%;
+  	height: 100%;
+  	display: flex;
+  	align-items: center;
+  	font-size: 2.6em;
+    font-weight: bold;
+    font-family: monospace;
+    font-style: italic;
+  	color: white;
+  }
+
+  nav .links {
+  	float: right;
+  	padding: 0;
+  	margin: 0;
+  	width: 60%;
+  	height: 100%;
+  	display: flex;
+  	justify-content: space-around;
+  	align-items: center;
+  }
+
+  nav .links li {
+  	list-style: none;
+  }
+
+  nav .links a {
+  	display: block;
+  	padding: 1em;
+  	font-size: 20px;
+  	font-weight: bold;
+  	color: white;
+  	text-decoration: none;
+  }
+
+  nav .links a:hover {
+  	color: #ECD1C7;
+  }
+
+  #nav-toggle {
+  	position: absolute;
+  	top: -100px;
+  }
+
+    /* HAMBURGER ICON */
+
+  nav .icon-burger {
+  	display: none;
+  	position: absolute;
+  	right: 24%;
+  	top: 50%;
+  	transform: translateY(-50%);
+  }
+
+    /* HAMBURGER ICONS'S SIZE */
+
+  nav .icon-burger .line {
+  	width: 30px;
+  	height: 5px;
+  	background-color: white;
+  	margin: 5px;
+  	border-radius: 3px;
+  	transition: all .3s ease-in-out;
+  }
+
+      /*- - - - MOBILE VIEW - - - -*/
+
+  @media screen and (max-width: 768px) {
+
+    .container {
+      /* position: fixed;
+      top: 13em;
+      right: 0;
+      left: 15em; */
+      border: 1px solid black;
+      margin-left: 60px;
+      margin-top: 0;
+      width: 450px;
+      height: 650px;
+    }
+
+    .container2 {
+      /* display: flex;
+      position: fixed; */
+      border: 1px solid black;
+      margin-top: -150px;
+      margin-left: 140px;
+      /* top: 21em;
+      right: 30em;
+      bottom: 0; */
+      width: 18em;
+      height: 30em;
+    }
+
+    .heading {
+      position: absolute;
+      top: 300px;
+      bottom: 30px;
+      left: 211px;
+      width: 180px;
+    }
+
+    .name {
+      position: absolute;
+      top: 380px;
+      left: 190px;
+    }
+
+    .and {
+      position: absolute;
+      top: 427px;
+      bottom: 0;
+      left: 287px;
+      font-family: cursive;
+    }
+
+    .name2 {
+      position: absolute;
+      top: 460px;
+      left: 190px;
+    }
+
+    .location {
+      position: absolute;
+      top: 520px;
+      left: 206px;
+      width:185px;
+      height: auto;
+      font-family:Arial;
+      border:none;
+      resize:none;
+    }
+
+    .heading , .location {
+      text-align: center;
+      font-family: cursive;
+    }
+
+    .name , .name2 {
+      /* left: 120px; */
+      font-family:serif;
+      font-size: 20px;
+      font-style: italic;
+      text-align: center;
+      width: 220px;
+      height: auto;
+    }
+
+  	nav .logo {
+  		float: none;
+      position: absolute;
+      left: 215px;
+  		width: auto;
+  		justify-content: center;
+  	}
+
+    /* pop up screen  */
+  	nav .links {
+  		position: fixed;
+  		z-index: 9;
+  		left: 0;
+  		right: 0;
+  		top: 100px;
+  		bottom: 100%;
+  		width: auto;
+  		height: auto;
+  		flex-direction: column;
+  		justify-content: space-evenly;
+  		background-color: black;
+      opacity: 0.8;
+  		overflow: hidden;
+  		box-sizing: border-box;
+  		transition: all .3s ease-in-out;
+  	}
+
+  	nav .links a {
+  		font-size: 20px;
+  	}
+
+    nav .links a:hover{
+  		color: #ECD1C7;
+  	}
+
+  	nav :checked ~ .links {
+  		bottom: 0;
+  	}
+
+  	nav .icon-burger {
+  		display: block;
+  	}
+
+    .big-container{
+        display: grid;
+        grid-template-areas:
+        "cont-1 cont-1"
+        "cont-2 cont-2";
+        margin-left: 0;
+        margin-right: 150px;
+        margin-top: 150px;
+      }
 }
+
   </style>
 
-      <!-- template + wordings -->
 
     <body>
-    <div class="container">
+
+      <!-- NAVIGATION -->
+      <nav>
+    	<input id = "nav-toggle" type = "checkbox">
+    	<div class = "logo">ANZ.inc</div>
+    	<ul class = "links">
+    		<li><a href = "Home.html">HOME</a></li>
+    		<li><a href = "Home.html">CORPORATE</a></li>
+    		<li><a href = "Home.html">FORMAL</a></li>
+    		<li><a href = "Home.html">INFORMAL</a></li>
+    	</ul>
+
+      <!-- 3 LINES FOR THE HAMBURGER ICON -->
+    	<label for = "nav-toggle" class = "icon-burger">
+    		<div class = "line"></div>
+    		<div class = "line"></div>
+    		<div class = "line"></div>
+    	</label>
+    </nav>
+
+    <!-- USER INPUT TO TEMPLATE -->
+    <div class = "big-container">
+    <div class="container" style = "grid-area: cont-1">
     <img src = "WeddingTemp2.jpg" width = "450px" height = "650px">
     <div class="heading"> <h4> You are cordially invited to the wedding of </h4></div>
     <div class="name"> <h2 id = "demo"> ROTIMAS </h2></div>
@@ -91,15 +355,15 @@ h2 , h4 {
     <div class="location"> <h4 id = "demo3"></h4></div>
     </div>
 
-    <div class="container2">
+    <div class="container2" style = "grid-area: cont-2">
     <ul style="list-style-type:none">
       <li><label for="fname">Name 1</label></li>
       <input type="text" id="fname" name="firstname" placeholder="Enter first name">
-      <li></li>
+      <li></li><br/>
 
       <li> <label for="lname">Name 2</label></li>
       <input type="text" id="lname" name="lastname" placeholder="Enter second name">
-      <li></li>
+      <li></li><br/>
 
       <li> <label for="details"> Details </label></li>
       <textarea id="details" name="subject" placeholder="e.g Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club" style="height:200px"></textarea>
@@ -110,7 +374,7 @@ h2 , h4 {
 
       <button id = "update" onclick = "update()" type="submit"> Update </button>
       </div>
-
+    </div>
       <script>
 
   function update(){
