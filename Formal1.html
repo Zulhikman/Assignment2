@@ -7,75 +7,91 @@
   </head>
 
   <style>
-  body{
+
+  body {
     background: #FFFCF8;
   }
 
+  .big-container {
+    display: grid;
+    grid-gap: 200px;
+    margin-top: 200px;
+    margin-left: 70px;
+    grid-template-areas:
+    "cont-1 cont-2";
+  }
+
   .container {
-    position: absolute;
-    top: 6em;
+    /* position: fixed;
+    top: 13em;
     right: 0;
-    left: 9em;
+    left: 15em; */
     border: 1px solid black;
-    width: 28.1em;
-    height: 40.6em;
+    margin-left: 200px;
+    margin-top: 0;
+    width: 450px;
+    height: 650px;
   }
 
   .container2 {
-    position: absolute;
+    /* display: flex;
+    position: fixed; */
     border: 1px solid black;
-    top: 15em;
+    margin-top: 100px;
+    margin-right: 300px;
+    /* top: 21em;
     right: 30em;
-    bottom: 0;
-    width: 15em;
-    height: 25em;
+    bottom: 0; */
+    width: 18em;
+    height: 30em;
   }
 
   .heading {
     position: absolute;
-    top: 170px;
+    top: 340px;
     bottom: 30px;
-    left: 145px;
+    left: 410px;
     width: 180px;
   }
 
   .name {
     position: absolute;
-    top: 230px;
+    top: 420px;
+    left: 390px;
   }
 
   .and {
     position: absolute;
-    top: 290px;
-    bottom: 30px;
-    left: 220px;
+    top: 468px;
+    bottom: 0;
+    left: 486px;
     font-family: cursive;
   }
 
   .name2 {
     position: absolute;
-    top: 320px;
-
+    top: 500px;
+    left: 390px;
   }
 
   .location {
     position: absolute;
-    top: 385px;
-    left: 135px;
+    top: 570px;
+    left: 410px;
     width:185px;
     height: auto;
     font-family:Arial;
     border:none;
     resize:none;
-
   }
 
   .heading , .location {
     text-align: center;
     font-family: cursive;
   }
+
   .name , .name2 {
-    left: 120px;
+    /* left: 120px; */
     font-family:serif;
     font-size: 20px;
     font-style: italic;
@@ -84,11 +100,15 @@
     height: auto;
   }
 
-  #update{
-    margin: 20px;
+  #fname, #lname, #details{
+    width: 200px;
+    height: 36px;
   }
 
-  /* MOBILE VIEW */
+  #update{
+    margin: 41px;
+    margin-top: 7px;
+  }
 
   nav {
 	position: fixed;
@@ -133,10 +153,14 @@ nav .links li {
 nav .links a {
 	display: block;
 	padding: 1em;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
 	color: white;
 	text-decoration: none;
+}
+
+nav .links a:hover {
+	color: #ECD1C7;
 }
 
 #nav-toggle {
@@ -145,14 +169,17 @@ nav .links a {
 }
 
   /* HAMBURGER ICON */
+
 nav .icon-burger {
 	display: none;
 	position: absolute;
-	right: 5%;
+	right: 15%;
 	top: 50%;
 	transform: translateY(-50%);
 }
+
   /* HAMBURGER ICONS'S SIZE */
+
 nav .icon-burger .line {
 	width: 30px;
 	height: 5px;
@@ -162,13 +189,95 @@ nav .icon-burger .line {
 	transition: all .3s ease-in-out;
 }
 
+    /*- - - - MOBILE VIEW - - - -*/
+
 @media screen and (max-width: 768px) {
+
+  .container {
+    /* position: fixed;
+    top: 13em;
+    right: 0;
+    left: 15em; */
+    border: 1px solid black;
+    margin-left: 36px;
+    margin-top: 0;
+    width: 450px;
+    height: 650px;
+  }
+
+  .container2 {
+    /* display: flex;
+    position: fixed; */
+    border: 1px solid black;
+    margin-top: -150px;
+    margin-left: 125px;
+    /* top: 21em;
+    right: 30em;
+    bottom: 0; */
+    width: 18em;
+    height: 30em;
+  }
+
+  .heading {
+    position: absolute;
+    top: 290px;
+    bottom: 30px;
+    left: 180px;
+    width: 180px;
+  }
+
+  .name {
+    position: absolute;
+    top: 370px;
+    left: 160px;
+  }
+
+  .and {
+    position: absolute;
+    top: 417px;
+    bottom: 0;
+    left: 257px;
+    font-family: cursive;
+  }
+
+  .name2 {
+    position: absolute;
+    top: 450px;
+    left: 160px;
+  }
+
+  .location {
+    position: absolute;
+    top: 520px;
+    left: 180px;
+    width:185px;
+    height: auto;
+    font-family:Arial;
+    border:none;
+    resize:none;
+  }
+
+  .heading , .location {
+    text-align: center;
+    font-family: cursive;
+  }
+
+  .name , .name2 {
+    /* left: 120px; */
+    font-family:serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    width: 220px;
+    height: auto;
+  }
 
 	nav .logo {
 		float: none;
 		width: auto;
 		justify-content: center;
 	}
+
   /* pop up screen  */
 	nav .links {
 		position: fixed;
@@ -204,6 +313,16 @@ nav .icon-burger .line {
 		display: block;
 	}
 
+  .big-container{
+      display: grid;
+      grid-template-areas:
+      "cont-1 cont-1"
+      "cont-2 cont-2";
+      margin-left: 0;
+      margin-right: 150px;
+      margin-top: 150px;
+    }
+
 }
 
   </style>
@@ -230,8 +349,10 @@ nav .icon-burger .line {
   </nav>
 
   <!-- USER INPUT TO TEMPLATE -->
-  <div class="container">
-  <img src = "WeddingTemp.jpg" width = "450px" height = "650px">
+  <div class = "big-container">
+
+  <div class="container" style = "grid-area: cont-1">
+  <img class = "img" src = "WeddingTemp.jpg" width = "450px" height = "650px">
   <div class="heading"> <h4> You are cordially invited to the wedding of </h4></div>
   <div class="name"> <h2 id = "demo"> ROTIMAS </h2></div>
   <div class="and"> <h4> and </h4></div>
@@ -239,26 +360,28 @@ nav .icon-burger .line {
   <div class="location"> <h4 id = "demo3"></h4></div>
   </div>
 
-  <div class="container2">
+  <div class="container2" style = "grid-area: cont-2">
   <ul style="list-style-type:none">
+
     <li><label for="fname">Name 1</label></li>
     <input type="text" id="fname" name="firstname" placeholder="Enter first name">
-    <li></li>
+    <li></li><br/>
 
     <li> <label for="lname">Name 2</label></li>
     <input type="text" id="lname" name="lastname" placeholder="Enter second name">
-    <li></li>
+    <li></li><br/>
 
     <li> <label for="details"> Details </label></li>
     <textarea id="details" name="subject" placeholder="e.g Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club" style="height:200px"></textarea>
     <li></li>
+
   </ul>
 
     <!-- update button once takan kira berubah lah-->
 
     <button id = "update" onclick = "update()" type="submit"> Update </button>
     </div>
-
+    </div>
     <script>
 
 function update(){
