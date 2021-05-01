@@ -12,6 +12,8 @@ body {
   background-color: white;
   text-align: center;
   box-shadow: 0 24px 40px -8px #311B92;
+    background-image: url(painting.jpg);
+
 
 }
 .Birthday img {
@@ -27,4 +29,11 @@ body {
 .source-link a {
   color: #311B92;
   text-decoration: none;
+}
+
+.Birthday2 {
+  float:right;
+  border: 1px solid black;
+  width: 450px;
+  height: auto;
 }
