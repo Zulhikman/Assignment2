@@ -5,44 +5,56 @@
       <link rel="stylesheet" href="Ecard2.css">
     <title></title>
   </head>
-  <body>
-
-    <div class="Raya">
-      <img src="gam/raya.jpg" alt="">
-      <h1>Selamat Hari Raya Aidifitri</h1>
-      <h1>Maaf Zahir dan Batin</h1>
-
-  <h2>Dijemput datang ke rumah dengan mesra</h2>
-  <p id="demo"></p>
-  <br>
+  <body align="center">
 
 
- <h2>Dari</h2>
- <p id="nama"></p>
 
-    </div>
 
-    <form class="" action="index.html" method="post">
-      <input id="place" type="text" name="" value="">
+        <div class="Raya">
+          <img src="gam/raya.jpg" alt="">
+          <h1>Selamat Hari Raya Aidilfitri</h1>
+          <h1>Maaf Zahir dan Batin</h1>
+          <p id="demo"></p>
 
-      <input id="name" type="text" placeholder="Enter Name!"/> <br>
 
-      <button onclick="change_text()">Submit</button>
+      <h2>Dijemput datang ke rumah dengan mesra.</h2>
+         <p id="demo2"></p>
 
-    </form>
 
-   <h6 class="source-link"><a href="https://www.freepik.com/free-photos-vectors/background"</a>Background vector created by Freepik</h6>
-     <script type="text/javascript">
 
-     function change_text(){
-    var place = document.getElementById("place").value;
-    document.getElementById("rumah").innerHTML = place;
+        </div>
 
-    var name = document.getElementById("name").value;
-    document.getElementById("nama").innerHTML = name;
-  }
+        <div class="Birthday2">
+        <form  action="index.html" method="post">
+          <li><label for="fname">Place Name</label></li>
+      <input  id="name" type="text" placeholder="Enter Person's Name!"/> <br>
 
-     </script>
+          <li><label for="fname">Place other person Name</label></li>
+          <textarea id="place" rows="4" cols="50" placeholder="Enter The Invited Person's Name!"></textarea><br>
+
+
+            <button type="button" name="button" onclick="change_text()">Submit</button>
+
+            </div>
+
+
+
+       <h6 class="source-link"><a href="https://www.freepik.com/free-photos-vectors/background"</a>Background vector created by Freepik</h6>
+
+         <script type="text/javascript">
+         function change_text(){
+        var name = document.getElementById("name").value;
+        document.getElementById("demo").innerHTML = "Dari " + name;
+
+        var place = document.getElementById("place").value;
+        document.getElementById("demo2").innerHTML = "Kepada " + place;
+
+
+    }
+
+
+         </script>
+
 
   </body>
 </html>
