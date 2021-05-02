@@ -8,25 +8,25 @@
   </head>
   <body align="center">
 
+  <div class = "big-container">
+
+  </div>
     <div class="Birthday">
       <img src="gam/birth2.jpg" alt="">
       <h1>Happy Birthday Celebration Of</h1>
       <p id="demo"></p>
 
-
-  <h2>You are invited to the party!</h2>
-     <p id="demo2"></p>
-
+      <h2>You are invited to the party!</h2>
+      <p id="demo2"></p>
 
       <h2>From</h2>
       <p id="demo3"></p>
 
-
     </div>
 
     <div class="Birthday2">
-    <form  action="index.html" method="post">
-  <input  id="name" type="text" placeholder="Enter The Invited Person's Name!"/> <br>
+      <form  action="index.html" method="post">
+      <input  id="name" type="text" placeholder="Enter The Invited Person's Name!"/> <br>
 
       <li><label for="fname">Place Description</label></li>
       <textarea id="place" placeholder="Enter Coordinates" rows="4" cols="50"></textarea><br>
@@ -34,12 +34,13 @@
       <input id="name2"type="text" placeholder="Enter Your Name!"/> <br>
 
 
-        <button type="button" name="button" onclick="change_text()">Submit</button>
+      <button type="button" name="button" onclick="change_text()">Submit</button>
 
-        </div>
+    </div>
+  </div>
 
-     <script type="text/javascript">
-     function change_text(){
+    <script type="text/javascript">
+    function change_text(){
     var name = document.getElementById("name").value;
     document.getElementById("demo").innerHTML = "Hello " + name;
 
@@ -49,7 +50,6 @@
     var name2 = document.getElementById("name2").value;
     document.getElementById("demo3").innerHTML =  name2;
 }
-
 
      </script>
 
