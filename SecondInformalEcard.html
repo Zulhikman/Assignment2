@@ -27,13 +27,15 @@
   </nav>
 
   <div class = "big-container">
-    <div class="container" style = "grid-area: cont-1">
+    <div id="conContainer" class="container" style = "grid-area: cont-1">
     <img src="gam/raya.jpg" alt="">
     <h1>Happy Eid Mubarak</h1>
     <p id="demo"></p>
 
     <h2>You are invited to our Open House!</h2>
-    <p id="demo2"></p>
+    <p id="demo2"></p><br>
+    <button onclick="changeColor();">Change color</button>
+
   </div>
 
   <div class="container2" style = "grid-area: cont-2">
@@ -48,21 +50,37 @@
     <textarea id="place" placeholder="Type here!"></textarea>
     <br><br>
 
-    <button type="button" name="button" onclick="change_text()">Submit</button>
+    <button type="button" name="button" onclick="change_text()">Submit</button><br>
+
+
   </div>
 </div>
 
 
 <script type="text/javascript">
 
-    function change_text(){
-    var name = document.getElementById("name").value;
-    document.getElementById("demo").innerHTML = "From " + name;
+function change_text(){
+var name = document.getElementById("name").value;
+document.getElementById("demo").innerHTML = "From " + name;
 
-    var place = document.getElementById("place").value;
-    document.getElementById("demo2").innerHTML = "To " + place;
+var place = document.getElementById("place").value;
+document.getElementById("demo2").innerHTML = "To " + place;
 
-    }
+  }
+
+  var colors = ["orange", "blue", "yellow","grey","red","pink"];
+var colorIndex = 0;
+function changeColor() {
+var col = document.getElementById("conContainer");
+if( colorIndex >= colors.length ) {
+colorIndex = 0;
+}
+col.style.backgroundColor = colors[colorIndex];
+colorIndex++;
+}
+
+
+
 </script>
 
 
