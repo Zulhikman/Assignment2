@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Customize </title>
+    <link href = "Custom.css" rel = "stylesheet"></link>
+  </head>
+
+<body>
+
+<!-- Barang kan di drag, eg text box and messages-->
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <h2 draggable="true" ondragstart="drag(event)" id="Heading1"> Happy Birthday! </h2>
+  <h2 draggable="true" ondragstart="drag(event)" id="Heading2"> Congratulations! </h2>
+  <h3 draggable="true" ondragstart="drag(event)" id="Heading3"> You are cordially invited to </h3>
+  <br>
+
+<!--textbox 1 -->
+
+  <label for="text1"> Textbox 1: </label>
+  <div id = "div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <h4 draggable="true" ondragstart="drag(event)" id = "text1"></h4></div>
+  <textarea id="details" placeholder="Message for textbox 1" style="height:200px"></textarea>
+  <br>
+  <button id = "update" onclick = "update()" type="submit"> Add Text </button>
+
+
+  <!--textbox 2 -->
+  <br></br>
+  <label for="text2"> Textbox 2: </label>
+  <h4 draggable="true" ondragstart="drag(event)" id = "text2"></h4>
+  <textarea id="details2" placeholder="Message for textbox 2" style="height:200px"></textarea>
+  <br>
+  <button id = "update2" onclick = "update2()" type="submit"> Add Text </button>
+  </div>
+
+<!-- kotak tampat kan di taruh the template -->
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
+
+
+
+
+
+
+
+<script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+
+    function update(){
+       var details = document.getElementById("details").value;
+       document.getElementById("text1").innerHTML =  details;
+    }
+
+    function update2(){
+       var details = document.getElementById("details2").value;
+       document.getElementById("text2").innerHTML =  details;
+    }
+</script>
+</html>
