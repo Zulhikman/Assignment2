@@ -40,20 +40,29 @@
 
 
   <div class="container2" style = "grid-area: cont-2">
-  <form  action="index.html" method="post">
+  <!-- <form  action="index.html" method="post"> -->
 
     <ul style="list-style-type:none">
-    <li><label for="fname">Enter Your Name</label></li>
-    <input  id="name" type="text" placeholder="Type here!"/>
-    <br> <br>
 
-    <li><label for="fname">Enter Invited Person's Name</label></li>
-    <textarea id="place" placeholder="Type here!"></textarea>
-    <br><br>
+      <li><label for="fname">Enter Your Name</label></li>
+      <input  id="name" type="text" placeholder="Type here!"/>
+      <br> <br>
 
-    <button type="button" onclick="changeColor();">Change color</button>
-    <br /><br />
-    <button type="button" name="button" onclick="change_text()"> Update </button>
+      <li><label for="fname">Enter Invited Person's Name</label></li>
+      <textarea id="place" placeholder="Type here!"></textarea>
+      <br><br>
+
+      <!-- chnage the color of the template-->
+      <button id = "change" type="button" onclick="changeColor();">Change color</button>
+      <br /><br />
+
+      <button type="button" name="button" onclick="change_text()">Submit</button>
+
+      <!-- save button which will save the input even after refresh -->
+      <button id = "save" onclick = "save()" type = "submit"> Save As Favourite </button>
+
+      <!-- load button which will load the input even after refresh -->
+      <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
 
 
   </div>
@@ -72,9 +81,10 @@
 
     }
 
-    var colors = ["orange", "#78BAE7", "#F9F061","grey","#FF6060","pink"];
-    var colorIndex = 0;
-    function changeColor() {
+  var colors = ["orange", "#78BAE7", "#F9F061","grey","#FF6060","pink"];
+  var colorIndex = 0;
+
+  function changeColor() {
       var col = document.getElementById("conContainer");
       if( colorIndex >= colors.length ) {
         colorIndex = 0;
@@ -82,6 +92,40 @@
       col.style.backgroundColor = colors[colorIndex];
       colorIndex++;
     }
+
+  var display_demo = document.getElementById("demo");
+  var demo_1 = document.getElementById("name");
+
+  var display_demo2 = document.getElementById("demo2");
+  var demo_2 = document.getElementById("place");
+
+  var display_color = document.getElementById("conContainer");
+  var color = document.getElementById("change");
+
+
+  demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+  demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+  color.addEventListener("input", letter => {display_color.textContent = letter.target.value;})
+
+
+  function save(){
+    localStorage.setItem("name", display_demo.textContent)
+    localStorage.setItem("place", display_demo2.textContent)
+    localStorage.setItem("change", display_color.textContent)
+
+  }
+
+  function load(){
+    demo_1.value = localStorage.getItem("name");
+    demo_2.value = localStorage.getItem("place");
+    color.value = localStorage.getItem("change");
+
+
+    demo.innerHTML = localStorage.getItem("name");
+    demo2.innerHTML = localStorage.getItem("place");
+    conContainer.innerHTML = localStorage.getItem("change");
+
+  }
 
 
 

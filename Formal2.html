@@ -30,12 +30,11 @@
   }
 
   .container2 {
-    /* float:right; */
     border: 1px solid black;
-    width: 340px;
-    height: 470px;
-    margin-right: 180px;
-    margin-top: 97px;
+    margin-top: 50px;
+    margin-right: 300px;
+    width: 287px;
+    height: 557px;
     background: #D49077;
   }
 
@@ -69,7 +68,7 @@
 
   .location {
     position: absolute;
-    top: 560px;
+    top: 575px;
     left: 519px;
     width:185px;
     height: auto;
@@ -91,7 +90,7 @@
     height: auto;
   }
 
-  #fname, #lname, #details{
+  #name1, #name2, #details{
     width: 200px;
     height: 36px;
   }
@@ -99,6 +98,18 @@
   #update{
     margin: 41px;
     margin-top: 7px;
+  }
+
+  #save{
+    margin-top: -30px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+
+  #load{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 41px;
   }
 
   h2 , h4 {
@@ -189,62 +200,53 @@
   @media screen and (max-width: 768px) {
 
     .container {
-      /* position: fixed;
-      top: 13em;
-      right: 0;
-      left: 15em; */
       border: 1px solid black;
-      margin-left: 60px;
+      margin-left: 44px;
       margin-top: 0;
       width: 450px;
       height: 650px;
     }
 
     .container2 {
-      /* display: flex;
-      position: fixed; */
       border: 1px solid black;
       margin-top: -150px;
-      margin-left: 140px;
-      /* top: 21em;
-      right: 30em;
-      bottom: 0; */
-      width: 18em;
-      height: 30em;
+      margin-left: 120px;
+      width: 290px;
+      height: 560px;
     }
 
     .heading {
       position: absolute;
       top: 300px;
       bottom: 30px;
-      left: 211px;
+      left: 196px;
       width: 180px;
     }
 
     .name {
       position: absolute;
       top: 380px;
-      left: 190px;
+      left: 178px;
     }
 
     .and {
       position: absolute;
       top: 427px;
       bottom: 0;
-      left: 287px;
+      left: 274px;
       font-family: cursive;
     }
 
     .name2 {
       position: absolute;
       top: 460px;
-      left: 190px;
+      left: 178px;
     }
 
     .location {
       position: absolute;
       top: 520px;
-      left: 206px;
+      left: 193px;
       width:185px;
       height: auto;
       font-family:Arial;
@@ -369,11 +371,11 @@
     <div class="container2" style = "grid-area: cont-2">
     <ul style="list-style-type:none">
       <li><label for="fname">Name 1</label></li>
-      <input type="text" id="fname" name="firstname" placeholder="Enter first name">
+      <input type="text" id="name1" name="firstname" placeholder="Enter first name">
       <li></li><br/>
 
       <li> <label for="lname">Name 2</label></li>
-      <input type="text" id="lname" name="lastname" placeholder="Enter second name">
+      <input type="text" id="name2" name="lastname" placeholder="Enter second name">
       <li></li><br/>
 
       <li> <label for="details"> Details </label></li>
@@ -382,24 +384,48 @@
     </ul>
 
       <!-- update button once takan kira berubah lah-->
+      <button id = "update" onclick = "update()" type="submit"> Update </button><br/>
 
-      <button id = "update" onclick = "update()" type="submit"> Update </button>
-      </div>
+      <!-- save button which will save the input even after refresh -->
+      <button id = "save" onclick = "save()" type="submit"> Save As Favourite </button>
+
+      <!-- load button which will load the input even after refresh -->
+      <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
     </div>
-      <script>
+    </div>
 
-  function update(){
-     var name = document.getElementById("fname").value;
-     document.getElementById("demo").innerHTML = name;
+    <script type="text/javascript">
 
-     var name2 = document.getElementById("lname").value;
-     document.getElementById("demo2").innerHTML = name2;
+      var display_demo = document.getElementById("demo");
+      var demo_1 = document.getElementById("name1");
 
-     var details = document.getElementById("details").value;
-     document.getElementById("demo3").innerHTML =  details;
-  }
+      var display_demo2 = document.getElementById("demo2");
+      var demo_2 = document.getElementById("name2");
 
-      </script>
+      var display_demo3 = document.getElementById("demo3");
+      var demo_3 = document.getElementById("details");
+
+      demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+      demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+      demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+
+      function save(){
+        localStorage.setItem("name1", display_demo.textContent)
+        localStorage.setItem("name2", display_demo2.textContent)
+        localStorage.setItem("details", display_demo3.textContent)
+      }
+
+      function load(){
+        demo_1.value = localStorage.getItem("name1");
+        demo_2.value = localStorage.getItem("name2");
+        demo_3.value = localStorage.getItem("details");
+
+        demo.innerHTML = localStorage.getItem("name1");
+        demo2.innerHTML = localStorage.getItem("name2");
+        demo3.innerHTML = localStorage.getItem("details");
+      }
+
+    </script>
 
 
       </form>

@@ -32,10 +32,10 @@
 
   .container2 {
     border: 1px solid black;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-right: 300px;
-    width: 18em;
-    height: 30em;
+    width: 280px;
+    height: 519px;
     background: #D49077;
   }
 
@@ -102,6 +102,18 @@
     margin-top: 7px;
   }
 
+  #save{
+    margin-top: -30px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+
+  #load{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 41px;
+  }
+
   nav {
 	position: fixed;
 	z-index: 10;
@@ -165,7 +177,7 @@ nav .links a:hover {
 nav .icon-burger {
 	display: none;
 	position: absolute;
-	right: 15%;
+	right: 8%;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -197,8 +209,8 @@ nav .icon-burger .line {
     border: 1px solid black;
     margin-top: -150px;
     margin-left: 125px;
-    width: 18em;
-    height: 30em;
+    width: 290px;
+    height: 520px;
   }
 
   .heading {
@@ -343,39 +355,63 @@ nav .icon-burger .line {
   </div>
 
   <div class="container2" style = "grid-area: cont-2">
-  <ul style="list-style-type:none">
+    <ul style="list-style-type:none">
 
-    <li><label for="fname">Name 1</label></li>
-    <input type="text" id="fname" name="firstname" placeholder="Enter first name">
-    <li></li><br/>
+      <li><label for="fname">Name 1</label></li>
+      <input type="text" id="name1" name="firstname" placeholder="Enter first name">
+      <li></li><br/>
 
-    <li> <label for="lname">Name 2</label></li>
-    <input type="text" id="lname" name="lastname" placeholder="Enter second name">
-    <li></li><br/>
+      <li> <label for="lname">Name 2</label></li>
+      <input type="text" id="name2" name="lastname" placeholder="Enter second name">
+      <li></li><br/>
 
-    <li> <label for="details"> Details </label></li>
-    <textarea id="details" name="subject" placeholder="e.g Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club" style="height:200px"></textarea>
-    <li></li>
+      <li> <label for="details"> Details </label></li>
+      <textarea id="details" name="subject" placeholder="e.g Monday, 3rd May 2021 Indera Samudera Hall, The Empire Hotel & Country Club" style="height:200px"></textarea>
+      <li></li>
 
-  </ul>
+    </ul>
 
     <!-- update button once takan kira berubah lah-->
+    <button id = "update" onclick = "update()" type="submit"> Update </button><br/>
 
-    <button id = "update" onclick = "update()" type="submit"> Update </button>
-    </div>
-    </div>
-    <script>
+      <!-- save button which will save the input even after refresh -->
+    <button id = "save" onclick = "save()" type="submit"> Save As Favourite </button>
 
-function update(){
-   var name = document.getElementById("fname").value;
-   document.getElementById("demo").innerHTML = name;
+      <!-- load button which will load the input even after refresh -->
+    <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
+  </div>
+  </div>
 
-   var name2 = document.getElementById("lname").value;
-   document.getElementById("demo2").innerHTML = name2;
+    <script type="text/javascript">
 
-   var details = document.getElementById("details").value;
-   document.getElementById("demo3").innerHTML =  details;
-}
+      var display_demo = document.getElementById("demo");
+      var demo_1 = document.getElementById("name1");
+
+      var display_demo2 = document.getElementById("demo2");
+      var demo_2 = document.getElementById("name2");
+
+      var display_demo3 = document.getElementById("demo3");
+      var demo_3 = document.getElementById("details");
+
+      demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+      demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+      demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+
+      function save(){
+        localStorage.setItem("name1", display_demo.textContent)
+        localStorage.setItem("name2", display_demo2.textContent)
+        localStorage.setItem("details", display_demo3.textContent)
+      }
+
+      function load(){
+        demo_1.value = localStorage.getItem("name1");
+        demo_2.value = localStorage.getItem("name2");
+        demo_3.value = localStorage.getItem("details");
+
+        demo.innerHTML = localStorage.getItem("name1");
+        demo2.innerHTML = localStorage.getItem("name2");
+        demo3.innerHTML = localStorage.getItem("details");
+      }
 
     </script>
 

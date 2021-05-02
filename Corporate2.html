@@ -28,11 +28,12 @@
     margin-left: 200px;
     margin-top: 0;
   }
+
   .container2 {
     float:right;
     border: 1px solid black;
     width: 287px;
-    height: 380px;
+    height: 476px;
     margin-top: 100px;
     margin-right: 300px;
     background: #D49077;
@@ -87,6 +88,18 @@
   #update{
     margin: 41px;
     margin-top: 7px;
+  }
+
+  #save{
+    margin-top: -30px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+
+  #load{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 41px;
   }
 
   nav {
@@ -185,16 +198,11 @@ nav .icon-burger .line {
   }
 
   .container2 {
-    /* display: flex;
-    position: fixed; */
     border: 1px solid black;
     margin-top: -150px;
     margin-left: 115px;
-    /* top: 21em;
-    right: 30em;
-    bottom: 0; */
     width: 300px;
-    height: 380px;
+    height: 470px;
   }
 
   .name {
@@ -233,6 +241,18 @@ nav .icon-burger .line {
     font-family: cursive;
     height: 100px;
   }
+
+  /* #save{
+    margin-top: -30px;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+
+  #load{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 40px;
+  } */
 
   h2 , h4, h3{
       color: #000000;
@@ -354,20 +374,36 @@ nav .icon-burger {
 
     <!-- update button once takan kira berubah lah-->
 
-    <button id = "update" onclick = "update()" type="submit"> Update </button>
+    <button id = "update" onclick = "update()" type="submit"> Update </button><br/>
+    <button id = "save" onclick = "save()" type="submit"> Save As Favourite </button>
+    <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
     </div>
 
   </div>
 
-    <script>
+    <script type="text/javascript">
 
-function update(){
-   var agenda = document.getElementById("agenda").value;
-   document.getElementById("demo").innerHTML = agenda;
+      var display_demo = document.getElementById("demo");
+      var demo_1 = document.getElementById("agenda");
 
-   var details = document.getElementById("details").value;
-   document.getElementById("demo3").innerHTML =  details;
-}
+      var display_demo3 = document.getElementById("demo3");
+      var demo_3 = document.getElementById("details");
+
+      demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+      demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+
+      function save(){
+        localStorage.setItem("agenda", display_demo.textContent)
+        localStorage.setItem("details", display_demo3.textContent)
+      }
+
+      function load(){
+        demo_1.value = localStorage.getItem("agenda");
+        demo_3.value = localStorage.getItem("details");
+
+        demo.innerHTML = localStorage.getItem("agenda");
+        demo3.innerHTML = localStorage.getItem("details");
+      }
 
     </script>
 
