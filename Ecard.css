@@ -1,6 +1,7 @@
 body {
   background: #FFFCF8;
 }
+
 .big-container {
   display: grid;
   grid-gap: 50px;
@@ -10,33 +11,43 @@ body {
   "cont-1 cont-2";
 }
 
-
-.Birthday {
-  margin: 40px auto;
+.container {
+  margin-top: 40px;
+  margin-left: 450px;
   padding: 16px;
   max-width: 400px;
   background-color: white;
   text-align: center;
   box-shadow: 0 24px 40px -8px #311B92;
-    background-image: url(painting.jpg);
-
+  background-image: url(painting.jpg);
 
 }
-.Birthday img {
-  width: 100%;
+
+.container2 {
+  float:right;
+  border: 1px solid black;
+  width: 350px;
+  height: 290px;
+  margin-top: -340px;
+  margin-right: 400px;
 }
 
-#demo, #demo2 {
+.container img {
+  width: 400px;
+}
+
+#demo, #demo2, #demo3 {
   font-size: 25px;
   font-family: serif;
   font-style: italic;
   font-weight: bold;
 }
 
-#name, #place{
+#name, #place, #name2{
   width: 200px;
   height: 36px;
 }
+
 nav {
 position: fixed;
 z-index: 10;
@@ -138,10 +149,10 @@ transition: all .3s ease-in-out;
   .container2 {
     float:right;
     border: 1px solid black;
-    width: 450px;
-    height: 230px;
-    margin-top: 30px;
-    margin-left: 42px;
+    width: 350px;
+    height: 290px;
+    margin-top: 50px;
+    margin-right: 90px;
   }
 
 /* HAMBURGER ICON */
@@ -204,11 +215,4 @@ nav .icon-burger {
     margin-right: 150px;
     margin-top: 150px;
   }
-}
-
-.Birthday2 {
-  float:right;
-  border: 1px solid black;
-  width: 450px;
-  height: auto;
 }

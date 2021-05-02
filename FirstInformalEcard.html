@@ -32,12 +32,11 @@
   <div class = "big-container">
 
   </div>
-    <div class="Birthday">
+    <div class="container" style = "grid-area: cont-1">
       <img src="gam/birth2.jpg" alt="">
-      <h1>Happy Birthday Celebration Of</h1>
       <p id="demo"></p>
 
-      <h2>You are invited to the party!</h2>
+      <h2>You are invited to the Birthday Party!</h2>
       <p id="demo2"></p>
 
       <h2>From</h2>
@@ -45,20 +44,25 @@
 
     </div>
 
-    <div class="Birthday2">
+    <div class="container2" style = "grid-area: cont-2">
       <form  action="index.html" method="post">
+
+      <ul style="list-style-type:none">
+      <li><label for="fname1">Enter The Invited Person's Name</label></li>
       <input  id="name" type="text" placeholder="Enter The Invited Person's Name!"/> <br>
+      <br />
 
-      <li><label for="fname">Place Description</label></li>
+      <li><label for="location">Place Description</label></li>
       <textarea id="place" placeholder="Enter Coordinates" rows="4" cols="50"></textarea><br>
+      <br />
 
+      <li><label for="fname2">Enter Your Name</label></li>
       <input id="name2"type="text" placeholder="Enter Your Name!"/> <br>
-
+      <br />
 
       <button type="button" name="button" onclick="change_text()">Update</button>
-
     </div>
-  </div>
+    </div>
 
     <script type="text/javascript">
     function change_text(){
