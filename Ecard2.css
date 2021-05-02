@@ -30,17 +30,9 @@ body {
   float:right;
   border: 1px solid black;
   width: 287px;
-  height: 230px;
+  height: 260px;
   margin-top: 170px;
   margin-right: 200px;
-}
-
-.containerC {
-  float:left;
-  width: 100px;
-  height: 50px;
-  margin-top: auto;
-  margin-right: auto;
 }
 
 #demo, #demo2 {
@@ -152,10 +144,11 @@ transition: all .3s ease-in-out;
   }
 
   .container2 {
+
     float:right;
     border: 1px solid black;
     width: 450px;
-    height: 230px;
+    height: 260px;
     margin-top: 30px;
     margin-left: 42px;
   }

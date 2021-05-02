@@ -38,9 +38,6 @@
 
   </div>
 
-  <div class="containerC" style = "grid-area: cont-2">
-  <button onclick="changeColor();">Change color</button>
-  </div>
 
   <div class="container2" style = "grid-area: cont-2">
   <form  action="index.html" method="post">
@@ -54,34 +51,37 @@
     <textarea id="place" placeholder="Type here!"></textarea>
     <br><br>
 
-    <button type="button" name="button" onclick="change_text()"> Update </button><br>
+    <button type="button" onclick="changeColor();">Change color</button>
+    <br /><br />
+    <button type="button" name="button" onclick="change_text()"> Update </button>
 
 
   </div>
+
 </div>
 
 
 <script type="text/javascript">
 
-function change_text(){
-var name = document.getElementById("name").value;
-document.getElementById("demo").innerHTML = "From " + name;
+  function change_text(){
+    var name = document.getElementById("name").value;
+    document.getElementById("demo").innerHTML = "From " + name;
 
-var place = document.getElementById("place").value;
-document.getElementById("demo2").innerHTML = "To " + place;
+    var place = document.getElementById("place").value;
+    document.getElementById("demo2").innerHTML = "To " + place;
 
-  }
+    }
 
-  var colors = ["orange", "blue", "yellow","grey","red","pink"];
-var colorIndex = 0;
-function changeColor() {
-var col = document.getElementById("conContainer");
-if( colorIndex >= colors.length ) {
-colorIndex = 0;
-}
-col.style.backgroundColor = colors[colorIndex];
-colorIndex++;
-}
+    var colors = ["orange", "#78BAE7", "#F9F061","grey","#FF6060","pink"];
+    var colorIndex = 0;
+    function changeColor() {
+      var col = document.getElementById("conContainer");
+      if( colorIndex >= colors.length ) {
+        colorIndex = 0;
+      }
+      col.style.backgroundColor = colors[colorIndex];
+      colorIndex++;
+    }
 
 
 
