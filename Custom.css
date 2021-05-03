@@ -26,3 +26,11 @@
 h4 {
   text-align: left;
 }
+
+#firstImage {
+
+  margin: 40px auto;
+  padding: 16px;
+  max-width: 400px;
+  text-align: center;
+}
