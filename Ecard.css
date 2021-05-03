@@ -27,7 +27,7 @@ body {
   float:right;
   border: 1px solid black;
   width: 350px;
-  height: 290px;
+  height: 330px;
   margin-top: -340px;
   margin-right: 400px;
   background: #D49077;
@@ -135,7 +135,7 @@ transition: all .3s ease-in-out;
 
   .container{
     margin-top: 0;
-    margin-left: 50px;
+    margin-left: 20px;
     padding: 16px;
     max-width: 400px;
     background-color: #008000;
@@ -151,9 +151,9 @@ transition: all .3s ease-in-out;
     float:right;
     border: 1px solid black;
     width: 350px;
-    height: 290px;
+    height: 330px;
     margin-top: 50px;
-    margin-right: 90px;
+    margin-right: 120px;
   }
 
 /* HAMBURGER ICON */
@@ -161,7 +161,7 @@ transition: all .3s ease-in-out;
 nav .icon-burger {
 display: none;
 position: absolute;
-right: 10%;
+right: 17%;
 top: 53%;
 transform: translateY(-50%);
 }

@@ -12,6 +12,10 @@ body {
   "cont-1 cont-2";
 }
 
+.place[placeholder]:before:empty{
+  content: attr(placeholder);
+  color:black;
+}
 .container{
   margin-top: 0;
   margin-left: 330px;
