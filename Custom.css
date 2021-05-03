@@ -9,10 +9,10 @@ body {
 
 }
 
-.heading {
+#heading {
   position: absolute;
   display: inline-block;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   top: 270px;
   right: 200px;
   left:690px;
@@ -23,10 +23,10 @@ body {
   width: 300px;
 }
 
-.heading2 {
+#heading2 {
   position: absolute;
   display: inline-block;
-    /* border: 1px solid red; */
+    border: 1px solid red;
   top: 600px;
   right: 500px;
   left:800px;

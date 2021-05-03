@@ -61,7 +61,10 @@
   <br>
   <button id = "update2" onclick = "update2()" type="submit"> Add Text </button>
   <br></br>
-  <button type="button" onclick="changeColor();">Change color</button>
+  <button type="button" onclick="changeColor();">Change color</button><br/><br/>
+
+  <button id = "save" onclick = "save()" type="submit"> Save As Favourite </button>
+  <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
   </div>
 
 </div>
@@ -73,9 +76,11 @@
      style = "grid-area: cont-2">
 
      <!-- Box to drop the words -->
-     <div class = "heading" ondrop="drop(event)" ondragover="allowDrop(event)">  </div>
-     <div class = "heading2" ondrop="drop(event)" ondragover="allowDrop(event)" align = "center">  </div>
+     <div id = "heading" ondrop="drop(event)" ondragover="allowDrop(event)">  </div>
+     <div id = "heading2" ondrop="drop(event)" ondragover="allowDrop(event)">  </div>
 </div>
+
+
 
 </body>
 
@@ -115,6 +120,37 @@
       }
       col.style.backgroundColor = colors[colorIndex];
       colorIndex++;
+    }
+
+
+    /*- - - - LOCAL STORAGE - - - -*/
+    var display_demo = document.getElementById("heading");
+    var demo_1 = document.getElementById("div2");
+
+    var display_demo2 = document.getElementById("heading2");
+    var demo_2 = document.getElementById("text1");
+
+    var display_demo3 = document.getElementById("heading2");
+    var demo_3 = document.getElementById("text2");
+
+    // demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+    // demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+    // demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+
+    function save(){
+      localStorage.setItem("div2", display_demo.textContent)
+      localStorage.setItem("text1", display_demo2.textContent)
+      localStorage.setItem("text2", display_demo3.textContent)
+    }
+
+    function load(){
+      demo_1.value = localStorage.getItem("div2");
+      demo_2.value = localStorage.getItem("text1");
+      demo_3.value = localStorage.getItem("text2");
+
+      heading.innerHTML = localStorage.getItem("div2");
+      heading2.innerHTML = localStorage.getItem("text1");
+      heading2.innerHTML = localStorage.getItem("text2");
     }
 </script>
 </html>
