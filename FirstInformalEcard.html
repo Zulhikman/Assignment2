@@ -45,7 +45,6 @@
     </div>
 
     <div class="container2" style = "grid-area: cont-2">
-      <form  action="index.html" method="post">
 
       <ul style="list-style-type:none">
       <li><label for="fname1">Enter Recipient's Name</label></li>
@@ -101,6 +100,7 @@
         localStorage.setItem("name", display_demo.textContent)
         localStorage.setItem("place", display_demo2.textContent)
         localStorage.setItem("name2", display_demo3.textContent)
+
       }
 
       function load(){
@@ -108,10 +108,10 @@
         demo_2.value = localStorage.getItem("place");
         demo_3.value = localStorage.getItem("name2");
 
-
         demo.innerHTML = localStorage.getItem("name");
         demo2.innerHTML = localStorage.getItem("place");
         demo3.innerHTML = localStorage.getItem("name2");
+
       }
 
      </script>
