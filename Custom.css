@@ -5,22 +5,22 @@
 }
 
 .Fcontainer {
-  float:right;
+  position: absolute;
   border: 1px solid black;
   width: 357px;
-  height: auto;
-  margin-top: 100px;
-  margin-right: 300px;
+  height: 800px;
+  margin-top:
+  margin-left: 1000px;
   background: #D49077;
 }
 
 #div3{
 
 
-  top:auto;
+  /* float: left; */
   width: 450px;
   height: 650px;
-  margin-left: 300px;
+  margin-left: 600px;
   padding: 10px;
   border: 1px solid black;
   font-family: cursive;
