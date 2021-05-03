@@ -14,10 +14,10 @@
     <input id = "nav-toggle" type = "checkbox">
     <div class = "logo">ANZ.inc</div>
     <ul class = "links">
-      <li><a href = "Home.html">HOME</a></li>
-      <li><a href = "Home.html #corporate">CORPORATE</a></li>
-  		<li><a href = "Home.html #formal">FORMAL</a></li>
-  		<li><a href = "Home.html #informal">INFORMAL</a></li>
+      <li><a href = "index.html">HOME</a></li>
+      <li><a href = "index.html #corporate">CORPORATE</a></li>
+  		<li><a href = "index.html #formal">FORMAL</a></li>
+  		<li><a href = "index.html #informal">INFORMAL</a></li>
     </ul>
 
     <!-- 3 LINES FOR THE HAMBURGER ICON -->
@@ -71,58 +71,50 @@
     </div>
 
     <script type="text/javascript">
-    function change_text(){
-    var name = document.getElementById("name").value;
-    document.getElementById("demo").innerHTML = "Hello " + name;
+      function change_text(){
+      var name = document.getElementById("name").value;
+      document.getElementById("demo").innerHTML = "Hello " + name;
 
-    var place = document.getElementById("place").value;
-    document.getElementById("demo2").innerHTML = "The place is at " + place;
+      var place = document.getElementById("place").value;
+      document.getElementById("demo2").innerHTML = "The place is at " + place;
 
-    var name2 = document.getElementById("name2").value;
-    document.getElementById("demo3").innerHTML =  name2;
-}
+      var name2 = document.getElementById("name2").value;
+      document.getElementById("demo3").innerHTML =  name2;
+      }
 
-var display_demo = document.getElementById("demo");
-var demo_1= document.getElementById("name");
+      var display_demo = document.getElementById("demo");
+      var demo_1= document.getElementById("name");
 
-var display_demo2 = document.getElementById("demo2");
-var demo_2 = document.getElementById("place");
+      var display_demo2 = document.getElementById("demo2");
+      var demo_2 = document.getElementById("place");
 
-var display_demo3 = document.getElementById("demo3");
-var demo_3 = document.getElementById("name2");
-
-
-
-demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
-demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
-demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+      var display_demo3 = document.getElementById("demo3");
+      var demo_3 = document.getElementById("name2");
 
 
-
-function save(){
-  localStorage.setItem("name", display_demo.textContent)
-  localStorage.setItem("place", display_demo2.textContent)
-  localStorage.setItem("name2", display_demo3.textContent)
+      demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+      demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+      demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
 
 
-}
+      function save(){
+        localStorage.setItem("name", display_demo.textContent)
+        localStorage.setItem("place", display_demo2.textContent)
+        localStorage.setItem("name2", display_demo3.textContent)
+      }
 
-function load(){
-  demo_1.value = localStorage.getItem("name");
-  demo_2.value = localStorage.getItem("place");
-  demo_3.value = localStorage.getItem("name2");
+      function load(){
+        demo_1.value = localStorage.getItem("name");
+        demo_2.value = localStorage.getItem("place");
+        demo_3.value = localStorage.getItem("name2");
 
 
-  demo.innerHTML = localStorage.getItem("name");
-  demo2.innerHTML = localStorage.getItem("place");
-  demo3.innerHTML = localStorage.getItem("name2");
-
-}
+        demo.innerHTML = localStorage.getItem("name");
+        demo2.innerHTML = localStorage.getItem("place");
+        demo3.innerHTML = localStorage.getItem("name2");
+      }
 
      </script>
-
-
-
 
   </body>
 </html>

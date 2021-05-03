@@ -12,10 +12,10 @@
     <input id = "nav-toggle" type = "checkbox">
     <div class = "logo">ANZ.inc</div>
     <ul class = "links">
-      <li><a href = "Home.html">HOME</a></li>
-      <li><a href = "Home.html #corporate">CORPORATE</a></li>
-  		<li><a href = "Home.html #formal">FORMAL</a></li>
-  		<li><a href = "Home.html #informal">INFORMAL</a></li>
+      <li><a href = "index.html">HOME</a></li>
+      <li><a href = "index.html #corporate">CORPORATE</a></li>
+  		<li><a href = "index.html #formal">FORMAL</a></li>
+  		<li><a href = "index.html #informal">INFORMAL</a></li>
     </ul>
 
     <!-- 3 LINES FOR THE HAMBURGER ICON -->
@@ -59,7 +59,7 @@
       <button type="button" name="button" onclick="change_text()">Update</button><br /><br />
 
       <!-- save button which will save the input even after refresh -->
-      <button id = "save" onclick = "save()" type = "submit"> Save As Favourite </button>&nbsp&nbsp  
+      <button id = "save" onclick = "save()" type = "submit"> Save As Favourite </button>&nbsp&nbsp
 
       <!-- load button which will load the input even after refresh -->
       <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
@@ -93,42 +93,38 @@
       colorIndex++;
     }
 
-  var display_demo = document.getElementById("demo");
-  var demo_1 = document.getElementById("name");
+    var display_demo = document.getElementById("demo");
+    var demo_1 = document.getElementById("name");
 
-  var display_demo2 = document.getElementById("demo2");
-  var demo_2 = document.getElementById("place");
+    var display_demo2 = document.getElementById("demo2");
+    var demo_2 = document.getElementById("place");
 
-  var display_color = document.getElementById("conContainer");
-  var color = document.getElementById("col");
-
-
-  demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
-  demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
-  color_1.addEventListener("input", letter => {display_conContainer.textContent = letter.target.value;})
+    var display_color = document.getElementById("conContainer");
+    var color = document.getElementById("col");
 
 
-  function save(){
-    localStorage.setItem("name", display_demo.textContent)
-    localStorage.setItem("place", display_demo2.textContent)
-    localStorage.setItem("col", display_conContainer.textContent)
-
-  }
-
-  function load(){
-    demo_1.value = localStorage.getItem("name");
-    demo_2.value = localStorage.getItem("place");
-    color_1.value = localStorage.getItem("col");
-    
+    demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+    demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+    color.addEventListener("input", letter => {display_conContainer.textContent = letter.target.value;})
 
 
-    demo.innerHTML = localStorage.getItem("name");
-    demo2.innerHTML = localStorage.getItem("place");
-    conContainer.innerHTML = localStorage.getItem("col");
+    function save(){
+      localStorage.setItem("name", display_demo.textContent)
+      localStorage.setItem("place", display_demo2.textContent)
+      localStorage.setItem("col", display_conContainer.textContent)
 
-  }
+    }
 
+    function load(){
+      demo_1.value = localStorage.getItem("name");
+      demo_2.value = localStorage.getItem("place");
+      color.value = localStorage.getItem("col");
 
+      demo.innerHTML = localStorage.getItem("name");
+      demo2.innerHTML = localStorage.getItem("place");
+      conContainer.innerHTML = localStorage.getItem("col");
+
+    }
 
 </script>
 
