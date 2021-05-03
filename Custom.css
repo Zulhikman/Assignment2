@@ -1,25 +1,59 @@
+body {
+  background: #FFFCF8;
+}
+
 #div1, #div2{
   float: right;
   width: 300px;
   height: auto;
+
 }
 
-.Fcontainer {
+.heading {
   position: absolute;
+  display: inline-block;
+  /* border: 1px solid red; */
+  top: 270px;
+  right: 200px;
+  left:690px;
+  /* margin-top: -10px;
+  margin-bottom: 90px;
+  margin-right: 300px; */
+  height: 250px;
+  width: 300px;
+}
+
+.heading2 {
+  position: absolute;
+  display: inline-block;
+    /* border: 1px solid red; */
+  top: 600px;
+  right: 500px;
+  left:800px;
+  /* margin-top: -10px;
+  margin-bottom: 90px;
+  margin-right: 300px; */
+  height: 250px;
+  width: 190px;
+}
+
+
+.Fcontainer {
+  /* position: absolute; */
   border: 1px solid black;
   width: 357px;
   height: 800px;
-  margin-top:
-  margin-left: 1000px;
+  margin-top: -1  0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 300px;
   background: #D49077;
 }
 
 #div3{
-
-
-  /* float: left; */
   width: 450px;
   height: 650px;
+  margin-top: -760px;
   margin-left: 600px;
   padding: 10px;
   border: 1px solid black;
@@ -129,7 +163,15 @@ transition: all .3s ease-in-out;
 
 @media screen and (max-width: 768px) {
 
-.container {
+  /* .Fcontainer {
+    border: 1px solid black;
+    width: 357px;
+    height: 800px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background: #D49077;
+  } */
+/* .container {
   border: 1px solid black;
   margin-left: 35px;
   margin-top: 0;
@@ -189,7 +231,7 @@ h2 , h4, h3{
 #agenda, #details{
   width: 200px;
   height: 36px;
-}
+} */
 
 /* HAMBURGER ICON */
 
@@ -242,13 +284,18 @@ nav .icon-burger {
   display: block;
 }
 
-.big-container{
+.Fcontainer{
     display: grid;
     grid-template-areas:
     "cont-1 cont-1"
     "cont-2 cont-2";
-    margin-left: 0;
-    margin-right: 150px;
-    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-top: 30px;
   }
+
+#div3{
+  margin-bottom: 100px;
+  margin-right: 200px;
+}
 }

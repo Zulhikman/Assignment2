@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Customize </title>
     <link href = "Custom.css" rel = "stylesheet"></link>
   </head>
@@ -28,18 +29,19 @@
     </label>
   </nav>
 
-  
+
 <br><br><br><br><br><br></br>
 <!-- Barang kan di drag, eg text box and messages-->
 
 <table>
-<tr><div class="Fcontainer">
+<tr>
+<div class="Fcontainer" style = "grid-area: cont-1">
 
 <div class = "big-container">
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <h2 draggable="true" ondragstart="drag(event)" id="Heading1"> Happy Birthday! </h2>
-  <h2 draggable="true" ondragstart="drag(event)" id="Heading2"> Congratulations! </h2>
-  <h3 draggable="true" ondragstart="drag(event)" id="Heading3"> You are cordially invited to </h3>
+  <h2 draggable = "true" ondragstart="drag(event)" id="Heading1"> Happy Birthday! </h2>
+  <h2 draggable = "true" ondragstart="drag(event)" id="Heading2"> Congratulations! </h2>
+  <h3 draggable = "true" ondragstart="drag(event)" id="Heading3"> You are cordially invited to </h3>
   <br>
 
 <!--textbox 1 -->
@@ -50,7 +52,6 @@
   <textarea id="details" placeholder="Message for textbox 1" style="height:200px"></textarea>
   <br>
   <button id = "update" onclick = "update()" type="submit"> Add Text </button>
-
 
   <!--textbox 2 -->
   <br></br>
@@ -68,16 +69,17 @@
 
 <tr>
 <!-- kotak tampat kan di taruh the template -->
-<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id = "div3" ondrop="drop(event)" ondragover="allowDrop(event)"
+     style = "grid-area: cont-2">
+
+     <!-- Box to drop the words -->
+     <div class = "heading" ondrop="drop(event)" ondragover="allowDrop(event)">  </div>
+     <div class = "heading2" ondrop="drop(event)" ondragover="allowDrop(event)" align = "center">  </div>
+</div>
+
 </body>
 
 </tr>
-
-
-
-
-
-
 
 <script>
     function allowDrop(ev) {
