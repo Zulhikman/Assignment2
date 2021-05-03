@@ -100,30 +100,31 @@
   var demo_2 = document.getElementById("place");
 
   var display_color = document.getElementById("conContainer");
-  var color = document.getElementById("change");
+  var color = document.getElementById("col");
 
 
   demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
   demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
-  color.addEventListener("input", letter => {display_color.textContent = letter.target.value;})
+  color_1.addEventListener("input", letter => {display_conContainer.textContent = letter.target.value;})
 
 
   function save(){
     localStorage.setItem("name", display_demo.textContent)
     localStorage.setItem("place", display_demo2.textContent)
-    localStorage.setItem("change", display_color.textContent)
+    localStorage.setItem("col", display_conContainer.textContent)
 
   }
 
   function load(){
     demo_1.value = localStorage.getItem("name");
     demo_2.value = localStorage.getItem("place");
-    color.value = localStorage.getItem("change");
+    color_1.value = localStorage.getItem("col");
+    
 
 
     demo.innerHTML = localStorage.getItem("name");
     demo2.innerHTML = localStorage.getItem("place");
-    conContainer.innerHTML = localStorage.getItem("change");
+    conContainer.innerHTML = localStorage.getItem("col");
 
   }
 

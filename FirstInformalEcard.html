@@ -57,10 +57,16 @@
       <br />
 
       <li><label for="fname2">Enter Your Name</label></li>
-      <input id="name2"type="text" placeholder="Enter Your Name!"/> <br>
+      <input id="name2" type="text" placeholder="Enter Your Name!"/> <br>
       <br />
 
       <button type="button" name="button" onclick="change_text()">Update</button>
+
+      <!-- save button which will save the input even after refresh -->
+      <button id = "save" onclick = "save()" type = "submit"> Save As Favourite </button>
+
+      <!-- load button which will load the input even after refresh -->
+      <button id = "load" onclick = "load()" type = "submit"> Load Favourite </button>
     </div>
     </div>
 
@@ -74,6 +80,43 @@
 
     var name2 = document.getElementById("name2").value;
     document.getElementById("demo3").innerHTML =  name2;
+}
+
+var display_demo = document.getElementById("demo");
+var demo_1= document.getElementById("name");
+
+var display_demo2 = document.getElementById("demo2");
+var demo_2 = document.getElementById("place");
+
+var display_demo3 = document.getElementById("demo3");
+var demo_3 = document.getElementById("name2");
+
+
+
+demo_1.addEventListener("input", letter => {display_demo.textContent = letter.target.value;})
+demo_2.addEventListener("input", letter => {display_demo2.textContent = letter.target.value;})
+demo_3.addEventListener("input", letter => {display_demo3.textContent = letter.target.value;})
+
+
+
+function save(){
+  localStorage.setItem("name", display_demo.textContent)
+  localStorage.setItem("place", display_demo2.textContent)
+  localStorage.setItem("name2", display_demo3.textContent)
+
+
+}
+
+function load(){
+  demo_1.value = localStorage.getItem("name");
+  demo_2.value = localStorage.getItem("place");
+  demo_3.value = localStorage.getItem("name2");
+
+
+  demo.innerHTML = localStorage.getItem("name");
+  demo2.innerHTML = localStorage.getItem("place");
+  demo3.innerHTML = localStorage.getItem("name2");
+
 }
 
      </script>
