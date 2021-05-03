@@ -4,6 +4,16 @@
   height: auto;
 }
 
+.Fcontainer {
+  float:right;
+  border: 1px solid black;
+  width: 357px;
+  height: 806px;
+  margin-top: 100px;
+  margin-right: 300px;
+  background: #D49077;
+}
+
 #div3{
 
   float: left;
